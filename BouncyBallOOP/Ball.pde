@@ -8,6 +8,7 @@ class Ball {
   Ball() {
     diam = 200;
     loc = new PVector(random(diam, width-diam), random(diam, height-diam));
+    vel = PVector.random2D();
     c = color(random(255), random(50), random(100, 255));
     println("I just initialized a new object of the Ball class!");
   }
@@ -17,5 +18,9 @@ class Ball {
     fill(c);
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
+  }
+
+  void move() {
+    loc.add(vel);    //add velocity to location
   }
 }

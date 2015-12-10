@@ -9,6 +9,8 @@ void setup() {
 
 void draw() {
   background(0);
+  b.move();            //call b's move() method
+  c.move();
   b.display();         //call b's display() method
   c.display();
 }
